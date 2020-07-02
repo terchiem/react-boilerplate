@@ -1,3 +1,7 @@
+import React from 'react';
+
+import PostList from 'components/PostList';
+
 /*
  * HomePage
  *
@@ -5,14 +9,15 @@
  *
  */
 
-import React from 'react';
-import { FormattedMessage } from 'react-intl';
-import messages from './messages';
-
-export default function HomePage() {
+function HomePage() {
   return (
-    <h1>
-      <FormattedMessage {...messages.header} />
-    </h1>
+    <section>
+      <h2>All Posts</h2>
+      <PostList />
+    </section>
   );
 }
+
+// TODO: map state to props
+
+export default HomePage;
