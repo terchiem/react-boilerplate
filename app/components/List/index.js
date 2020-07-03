@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import generateId from 'utils/generateId';
 
 import Ul from './Ul';
 import Wrapper from './Wrapper';
@@ -20,7 +21,7 @@ function List({ component, items }) {
   // If we have items, render them
   if (items) {
     content = items.map(item => (
-      <ComponentToRender key={`item-${item.id}`} item={item.content} />
+      <ComponentToRender key={generateId()} item={item} />
     ));
   } else {
     // Otherwise render a single component
