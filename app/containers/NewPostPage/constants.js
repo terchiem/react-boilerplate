@@ -10,3 +10,4 @@
  */
 
 export const CHANGE_POST_INPUT = 'boilerplate/NewPostPage/CHANGE_POST_INPUT';
+export const RESET_POST_INPUT = 'boilerplate/NewPostPage/RESET_POST_INPUT';

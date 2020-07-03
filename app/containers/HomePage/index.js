@@ -21,6 +21,13 @@ import saga from './saga';
  *
  * This is the first thing users see of our App, at the '/' route
  *
+ * Redux state:
+ *  home: {
+ *    loading -> bool indicating loading state,
+ *    error -> error messages,
+ *    posts -> an array of posts from the server
+ *  }
+ *
  */
 
 function HomePage({ loading, posts, error, dispatchGetPosts }) {
