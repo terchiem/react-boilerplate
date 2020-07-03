@@ -16,7 +16,10 @@ import LoadingSpinner from 'components/LoadingSpinner';
 function PostList({ loading, posts, error, dispatchGetPosts }) {
   /** Dispatch GET_POSTS on component mount */
   useEffect(() => {
-    dispatchGetPosts();
+    // Fetch posts if not present in store
+    if (posts === false) {
+      dispatchGetPosts();
+    }
   }, []);
 
   if (loading) {
