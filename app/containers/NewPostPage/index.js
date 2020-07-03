@@ -5,8 +5,9 @@ import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
 import injectReducer from 'utils/injectReducer';
 import injectSaga from 'utils/injectSaga';
+import { addPost } from 'containers/HomePage/actions';
 import { makeSelectInputValue } from './selectors';
-import { addPost, changePostInput } from './actions';
+import { changePostInput } from './actions';
 import reducer from './reducer';
 import saga from './saga';
 

@@ -9,7 +9,4 @@
  * export const YOUR_ACTION_CONSTANT = 'yourproject/YourContainer/YOUR_ACTION_CONSTANT';
  */
 
-export const ADD_POST = 'boilerplate/NewPostPage/ADD_POST';
-export const ADD_POST_SUCCESS = 'boilerplate/NewPostPage/ADD_POST_SUCCESS';
-export const ADD_POST_FAIL = 'boilerplate/NewPostPage/ADD_POST_FAIL';
 export const CHANGE_POST_INPUT = 'boilerplate/NewPostPage/CHANGE_POST_INPUT';

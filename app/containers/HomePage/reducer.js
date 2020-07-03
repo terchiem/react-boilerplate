@@ -3,7 +3,8 @@ import {
   GET_POSTS,
   GET_POSTS_SUCCESS,
   GET_POSTS_FAIL,
-  ADD_POST_TO_LIST,
+  ADD_POST_SUCCESS,
+  ADD_POST_FAIL,
 } from './constants';
 
 export const INITIAL_STATE = {
@@ -27,11 +28,12 @@ function postListReducer(state = INITIAL_STATE, action) {
         break;
 
       case GET_POSTS_FAIL:
+      case ADD_POST_FAIL:
         draft.loading = false;
         draft.error = action.error;
         break;
 
-      case ADD_POST_TO_LIST:
+      case ADD_POST_SUCCESS:
         draft.posts.unshift(action.post);
         break;
 

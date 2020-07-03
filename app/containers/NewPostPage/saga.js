@@ -4,11 +4,9 @@
 
 import request from 'utils/request';
 import { call, put, takeLatest, select } from 'redux-saga/effects';
-import { addPostToList } from 'containers/HomePage/actions';
-import { addPostFail } from './actions';
+import { addPostSuccess, addPostFail } from 'containers/HomePage/actions';
+import { ADD_POST } from 'containers/HomePage/constants';
 import { makeSelectInputValue } from './selectors';
-
-import { ADD_POST } from './constants';
 
 /**
  * Post API request/response handler
@@ -26,7 +24,7 @@ export function* addNewPost() {
       },
       body: JSON.stringify({ post }),
     });
-    yield put(addPostToList(response.post));
+    yield put(addPostSuccess(response.post));
   } catch (err) {
     yield put(addPostFail(err));
   }

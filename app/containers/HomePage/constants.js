@@ -12,4 +12,6 @@
 export const GET_POSTS = 'boilerplate/HomePage/GET_POSTS';
 export const GET_POSTS_SUCCESS = 'boilerplate/HomePage/GET_POSTS_SUCCESS';
 export const GET_POSTS_FAIL = 'boilerplate/HomePage/GET_POSTS_FAIL';
-export const ADD_POST_TO_LIST = 'boilerplate/HomePage/ADD_POST_TO_LIST';
+export const ADD_POST = 'boilerplate/HomePage/ADD_POST';
+export const ADD_POST_SUCCESS = 'boilerplate/HomePage/ADD_POST_SUCCESS';
+export const ADD_POST_FAIL = 'boilerplate/HomePage/ADD_POST_FAIL';
