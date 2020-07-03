@@ -1,7 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { compose } from 'redux';
+import { createStructuredSelector } from 'reselect';
+import injectReducer from 'utils/injectReducer';
+import injectSaga from 'utils/injectSaga';
+import { makeSelectInputValue } from './selectors';
+import { addPost, changePostInput } from './actions';
+import reducer from './reducer';
+import saga from './saga';
 
-import Form from './Form';
 import Button from './Button';
 
 /*
@@ -11,30 +19,51 @@ import Button from './Button';
  *
  */
 
-function NewPostPage({ newPost, handleChange, handleSubmit }) {
+function NewPostPage({ inputValue, handleChange, handleSubmit }) {
   return (
     <section>
       <h2>New Post</h2>
-      <Form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <input
           id="newPost"
-          value={newPost}
+          value={inputValue}
           onChange={handleChange}
           aria-label="newPost"
           placeholder="Say something..."
         />
         <Button type="submit">Submit</Button>
-      </Form>
+      </form>
     </section>
   );
 }
 
 NewPostPage.propTypes = {
-  newPost: PropTypes.string,
+  inputValue: PropTypes.string,
   handleChange: PropTypes.func,
   handleSubmit: PropTypes.func,
 };
 
-// TODO: map state/dispatch to props
+const mapStateToProps = createStructuredSelector({
+  inputValue: makeSelectInputValue(),
+});
 
-export default NewPostPage;
+const mapDispatchToProps = dispatch => ({
+  handleChange: evt => dispatch(changePostInput(evt.target.value)),
+  handleSubmit: evt => {
+    evt.preventDefault();
+    dispatch(addPost(evt.target.value));
+  },
+});
+
+const withConnect = connect(
+  mapStateToProps,
+  mapDispatchToProps,
+);
+const withReducer = injectReducer({ key: 'newPost', reducer });
+const withSaga = injectSaga({ key: 'newPost', saga });
+
+export default compose(
+  withConnect,
+  withReducer,
+  withSaga,
+)(NewPostPage);
