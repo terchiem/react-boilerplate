@@ -6,7 +6,7 @@ import { createStructuredSelector } from 'reselect';
 import injectReducer from 'utils/injectReducer';
 import injectSaga from 'utils/injectSaga';
 
-import PostList from 'containers/PostList';
+import PostList from 'components/PostList';
 import { getPosts } from './actions';
 import {
   makeSelectLoading,
