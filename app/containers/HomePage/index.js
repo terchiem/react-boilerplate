@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
@@ -31,17 +31,18 @@ import saga from './saga';
  */
 
 function HomePage({ loading, posts, error, dispatchGetPosts }) {
-  const postListProps = {
-    loading,
-    posts,
-    error,
-    dispatchGetPosts,
-  };
+  // Dispatch GET_POSTS on component mount
+  useEffect(() => {
+    // Fetch posts only if not present in store
+    if (posts === false) {
+      dispatchGetPosts();
+    }
+  }, []);
 
   return (
     <section>
       <h2>All Posts</h2>
-      <PostList {...postListProps} />
+      <PostList loading={loading} posts={posts} error={error} />
     </section>
   );
 }
