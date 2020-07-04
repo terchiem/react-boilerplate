@@ -4,10 +4,10 @@ import Wrapper from './Wrapper';
 import Spinner from './Spinner';
 
 /*
- * LoadingSpinner.js
+ * LoadingSpinner
  *
- * Loading indicator component to be used when data is being
- * loaded or fetched from an API
+ * Loading indicator component to be used when data is being loaded or
+ * fetched from an API
  *
  */
 

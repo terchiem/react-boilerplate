@@ -4,9 +4,10 @@ const Wrapper = styled.div`
   padding: 0;
   margin: 0;
   width: 100%;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 `;
 

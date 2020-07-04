@@ -14,8 +14,8 @@ const Spinner = styled.div`
   border: 6px solid #eee;
   border-top: 6px solid #3498db;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
   animation: ${spin} 0.6s cubic-bezier(0.39, 0.66, 0.72, 0.78) infinite;
 `;
 
