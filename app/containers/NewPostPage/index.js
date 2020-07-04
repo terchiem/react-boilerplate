@@ -37,6 +37,7 @@ function NewPostPage({ inputValue, handleChange, handleSubmit }) {
           onChange={handleChange}
           aria-label="newPost"
           placeholder="Say something..."
+          required
         />
         <Button type="submit">Submit</Button>
       </form>
@@ -58,6 +59,7 @@ const mapDispatchToProps = dispatch => ({
   handleChange: evt => dispatch(changePostInput(evt.target.value)),
   handleSubmit: evt => {
     evt.preventDefault();
+    // TODO: Add input validation before dispatching action
     dispatch(addPost());
     dispatch(resetPostInput());
     history.push('/');
