@@ -58,7 +58,7 @@ const mapDispatchToProps = dispatch => ({
   handleChange: evt => dispatch(changePostInput(evt.target.value)),
   handleSubmit: evt => {
     evt.preventDefault();
-    dispatch(addPost(evt.target.value));
+    dispatch(addPost());
     dispatch(resetPostInput());
     history.push('/');
   },

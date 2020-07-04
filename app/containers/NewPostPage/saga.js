@@ -1,5 +1,5 @@
 /**
- * Add a new post to the server
+ * Saga to add a new post to the server through API call
  */
 
 import request from 'utils/request';
@@ -7,10 +7,6 @@ import { call, put, takeLatest, select } from 'redux-saga/effects';
 import { addPostSuccess, addPostFail } from 'containers/HomePage/actions';
 import { ADD_POST } from 'containers/HomePage/constants';
 import { makeSelectInputValue } from './selectors';
-
-/**
- * Post API request/response handler
- */
 
 export function* addNewPost() {
   const requestURL = `http://localhost:3000/api`;

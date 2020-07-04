@@ -1,3 +1,7 @@
+/**
+ * Actions dealing with the text input control of the NewPostPage container
+ */
+
 import { CHANGE_POST_INPUT, RESET_POST_INPUT } from './constants';
 
 export function changePostInput(value) {

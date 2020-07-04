@@ -1,3 +1,8 @@
+/**
+ * Reducer to handle actions dealing with the text input control of
+ * the NewPostPage container
+ */
+
 import produce from 'immer';
 import { CHANGE_POST_INPUT, RESET_POST_INPUT } from './constants';
 

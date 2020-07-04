@@ -1,3 +1,7 @@
+/**
+ * Reducer to handle actions dealing with retrieval and creation of posts
+ */
+
 import produce from 'immer';
 import {
   GET_POSTS,

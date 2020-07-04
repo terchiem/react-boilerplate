@@ -1,3 +1,7 @@
+/**
+ * Actions dealing with retrieval and creation of posts
+ */
+
 import {
   GET_POSTS,
   GET_POSTS_SUCCESS,
@@ -27,10 +31,9 @@ export function getPostsFail(error) {
   };
 }
 
-export function addPost(post) {
+export function addPost() {
   return {
     type: ADD_POST,
-    post,
   };
 }
 

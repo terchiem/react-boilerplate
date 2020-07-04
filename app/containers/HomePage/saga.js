@@ -1,5 +1,5 @@
 /**
- * Gets a list of posts from the server
+ * Saga to get all posts from the server through API call
  */
 
 import request from 'utils/request';
@@ -7,10 +7,6 @@ import { call, put, takeLatest } from 'redux-saga/effects';
 import { getPostsSuccess, getPostsFail } from './actions';
 
 import { GET_POSTS } from './constants';
-
-/**
- * Post API request/response handler
- */
 
 export function* getPostList() {
   const requestURL = `http://localhost:3000/api`;
