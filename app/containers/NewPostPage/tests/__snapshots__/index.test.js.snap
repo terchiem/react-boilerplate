@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NewPostPage /> should render and match the snapshot 1`] = `
+<section>
+  <h2>
+    New Post
+  </h2>
+  <form>
+    <input
+      aria-label="newPost"
+      id="newPost"
+      placeholder="Say something..."
+      required=""
+      value=""
+    />
+    <button
+      class="Button-l2b7vc-0 iiHOpd"
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</section>
+`;

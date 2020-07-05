@@ -54,7 +54,7 @@ const mapStateToProps = createStructuredSelector({
   inputValue: makeSelectInputValue(),
 });
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   handleChange: evt => dispatch(changePostInput(evt.target.value)),
   handleSubmit: evt => {
     evt.preventDefault();
