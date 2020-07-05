@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
 
     return res.status(200).json({ posts });
   } catch (err) {
-    return res.status(err.status).json({ error: err.message });
+    return res.status(err.status).json({ message: err.message });
   }
 });
 
@@ -35,7 +35,7 @@ router.post('/', (req, res) => {
     posts.unshift(req.body.post);
     return res.status(201).json({ post: req.body.post });
   } catch (err) {
-    return res.status(err.status).json({ error: err.message });
+    return res.status(err.status).json({ message: err.message });
   }
 });
 
