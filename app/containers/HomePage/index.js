@@ -50,7 +50,7 @@ function HomePage({ loading, posts, error, dispatchGetPosts }) {
 HomePage.propTypes = {
   loading: PropTypes.bool,
   posts: PropTypes.oneOfType([PropTypes.bool, PropTypes.array]),
-  error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  error: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]),
   dispatchGetPosts: PropTypes.func,
 };
 

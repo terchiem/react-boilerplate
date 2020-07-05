@@ -34,8 +34,8 @@ function PostList({ loading, posts, error }) {
 
 PostList.propTypes = {
   loading: PropTypes.bool,
-  posts: PropTypes.oneOfType([PropTypes.bool, PropTypes.array]),
-  error: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  posts: PropTypes.any,
+  error: PropTypes.any,
 };
 
 export default PostList;
