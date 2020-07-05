@@ -38,7 +38,7 @@ describe('getPosts Saga', () => {
 describe('getPostsSaga Saga', () => {
   const saga = getPostsSaga();
 
-  it('should start task to watch for LOAD_REPOS action', () => {
+  it('should start task to watch for GET_POSTS action', () => {
     const takeLatestDescriptor = saga.next().value;
     expect(takeLatestDescriptor).toEqual(takeLatest(GET_POSTS, getPostList));
   });

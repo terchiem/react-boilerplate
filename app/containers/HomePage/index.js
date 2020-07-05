@@ -60,7 +60,7 @@ const mapStateToProps = createStructuredSelector({
   error: makeSelectError(),
 });
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   dispatchGetPosts: () => dispatch(getPosts()),
 });
 
