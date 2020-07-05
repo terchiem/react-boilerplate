@@ -18,7 +18,7 @@ export const INITIAL_STATE = {
 };
 
 /* eslint-disable default-case, no-param-reassign */
-function postListReducer(state = INITIAL_STATE, action) {
+function homeReducer(state = INITIAL_STATE, action) {
   return produce(state, draft => {
     switch (action.type) {
       case GET_POSTS:
@@ -49,4 +49,4 @@ function postListReducer(state = INITIAL_STATE, action) {
   });
 }
 
-export default postListReducer;
+export default homeReducer;
