@@ -3,9 +3,11 @@
  */
 
 import request from 'utils/request';
+import { push } from 'connected-react-router';
 import { call, put, takeLatest, select } from 'redux-saga/effects';
-import { addPostSuccess, addPostFail } from 'containers/HomePage/actions';
 import { ADD_POST } from 'containers/HomePage/constants';
+import { addPostSuccess, addPostFail } from 'containers/HomePage/actions';
+import { resetPostInput } from './actions';
 import { makeSelectInputValue } from './selectors';
 
 export function* addNewPost() {
@@ -21,6 +23,8 @@ export function* addNewPost() {
       body: JSON.stringify({ post }),
     });
     yield put(addPostSuccess(response.post));
+    yield put(resetPostInput());
+    yield put(push('/'));
   } catch (err) {
     yield put(addPostFail(err));
   }

@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import history from 'utils/history';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
@@ -8,7 +7,7 @@ import injectReducer from 'utils/injectReducer';
 import injectSaga from 'utils/injectSaga';
 import { addPost } from 'containers/HomePage/actions';
 import { makeSelectInputValue } from './selectors';
-import { changePostInput, resetPostInput } from './actions';
+import { changePostInput } from './actions';
 import reducer from './reducer';
 import saga from './saga';
 
@@ -61,8 +60,6 @@ const mapDispatchToProps = dispatch => ({
     evt.preventDefault();
     // TODO: Add input validation before dispatching action
     dispatch(addPost());
-    dispatch(resetPostInput());
-    history.push('/');
   },
 });
 
