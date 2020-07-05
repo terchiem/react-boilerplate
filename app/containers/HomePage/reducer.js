@@ -24,6 +24,7 @@ function postListReducer(state = INITIAL_STATE, action) {
       case GET_POSTS:
         draft.loading = true;
         draft.posts = false;
+        draft.error = false;
         break;
 
       case GET_POSTS_SUCCESS:
