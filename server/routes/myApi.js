@@ -11,11 +11,6 @@ const posts = ['Post 1', 'Post 2'];
 
 router.get('/', (req, res) => {
   try {
-    // randomized errors for pessimistic testing
-    if (Math.random() > 0.5) {
-      throw new ExpressError(400, 'Something went wrong!');
-    }
-
     return res.status(200).json({ posts });
   } catch (err) {
     return res.status(err.status).json({ message: err.message });
