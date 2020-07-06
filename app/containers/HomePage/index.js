@@ -5,7 +5,6 @@ import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
 import injectReducer from 'utils/injectReducer';
 import injectSaga from 'utils/injectSaga';
-
 import PostList from 'components/PostList';
 import { getPosts } from './actions';
 import {
@@ -19,12 +18,12 @@ import saga from './saga';
 /*
  * HomePage
  *
- * This is the first thing users see of our App, at the '/' route
+ * Displays a list of all posts, at the '/' route
  *
  * Redux state:
  *  home: {
- *    loading -> bool indicating loading state,
- *    error -> error messages,
+ *    loading -> bool indicating loading state
+ *    error -> error response from server
  *    posts -> an array of posts from the server
  *  }
  *

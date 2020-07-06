@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import generateId from 'utils/generateId';
-
 import Ul from './Ul';
 import Wrapper from './Wrapper';
 
@@ -10,7 +9,7 @@ import Wrapper from './Wrapper';
  * List
  *
  * Presentational ul component
- * List items must have the structure: { id, content }
+ * A unique id is generated for each list item
  *
  */
 

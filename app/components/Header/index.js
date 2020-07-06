@@ -17,7 +17,6 @@ function Header() {
     <Wrapper>
       <H1>Post List</H1>
       <div>
-        {/* TODO: add active location */}
         <HeaderLink to="/">All Posts</HeaderLink>
         <HeaderLink to="/new">New Post</HeaderLink>
       </div>
